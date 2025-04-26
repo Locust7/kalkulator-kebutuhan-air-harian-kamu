@@ -37,8 +37,9 @@ dasar -= 100  # Wanita cenderung butuh sedikit lebih sedikit air
     # Penyesuaian berdasarkan usia
     if usia < 18:
         dasar -= 300  # Anak-anak membutuhkan sedikit air
-    else:
-        dasar += 0  # Dewasa membutuhkan air sesuai hitungan dasar
+    elif usia >= 18:
+        # Dewasa tidak ada perubahan tambahan
+        pass
 
     return dasar / 1000  # Mengubah dari ml ke liter
 
@@ -51,4 +52,4 @@ if st.button("Hitung Kebutuhan Air"):
         st.warning("Masukkan berat badan yang valid.")
 
 st.markdown("---")
-st.caption("Proyek Streamlit oleh [IFTA, NADILA, SULTHAN, VANIA, DAVIONA]")
+st.caption("Proyek Streamlit oleh [IFTA, NADILA, VANIA, DAVIONA, SULTHAN]")
